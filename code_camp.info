@@ -1,0 +1,4 @@
+name = 2013 Boise Code Camp
+description = Demo module for Boise Code Camp 2013
+core = 7.x
+version= 7.x-1.0-beta

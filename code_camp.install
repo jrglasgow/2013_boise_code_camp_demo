@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ *
+ * Installation callbacks
+ */
+
+
+/**
+ * Implements hook_schema().
+ */
+function  code_camp_schema() {
+  $schema = array();
+  $schema['code_camp'] = array(
+    'description' => 'code camp demp table.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'Primary Key: Unique ID.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'a person\'s name.',
+      ),
+      'phone' => array(
+        'type' => 'varchar',
+        'length' => 20,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'person\'s phone number.',
+      ),
+       'email' => array(
+        'type' => 'varchar',
+        'length' => 150,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'person\'s e-mail address',
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+/*
+function code_camp_install() {
+
+}
+*/

@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Boise Code Camp 2013 demo module
+ */
+
+
+/**
+ * Implements hook_menu().
+ */
+function code_camp_menu() {
+  $items = array();
+
+  $items['code_camp'] = array(
+    'title'         => '2013 Boise Code Camp',
+    'description'   => 'This is a demo page for 2013 Boise Code Camp',
+    'page callback' => 'code_camp_page',
+    'access arguments'  => array('view published content'),
+    'file'              => 'code_camp.pages.inc',
+  );
+
+
+  return $items;
+}
